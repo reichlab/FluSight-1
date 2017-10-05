@@ -1,4 +1,5 @@
 ## test stacking
+library(dplyr)
 stacking_weights <- expand.grid(
     component_model_id = c("Delphi_Uniform", "ReichLab_kcde"),
     target = c(
@@ -21,7 +22,7 @@ stacking_weights$weight <- c(
     .5, .5
 )
 
-files <- data.frame(
+files <- data_frame(
     file = c(
         "~/Documents/research-versioned/cdc-flusight-ensemble/ReichLab_kcde/EW01-2011-ReichLab_kcde.csv",
         "~/Documents/research-versioned/cdc-flusight-ensemble/Delphi_Uniform/EW01-2011-Delphi_Uniform.csv"
